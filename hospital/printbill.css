@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.bill-container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Header Section */
+.bill-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.bill-header .logo {
+    width: 100px;
+    height: auto;
+}
+
+.bill-header .hospital-info {
+    text-align: right;
+}
+
+.bill-header h1 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    color: #333;
+}
+
+.bill-header p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Bill Information */
+.bill-info table {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.bill-info td {
+    padding: 5px 0;
+}
+
+/* Itemized Bill Table */
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.bill-table thead th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.bill-table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Total Summary */
+.total-summary table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.total-summary td {
+    padding: 8px 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Footer Section */
+.bill-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Print Button */
+.print-btn {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.print-btn:hover {
+    background: #45a049;
+}
+@media print {
+    .print-btn {
+        display: none;
+    }
+}

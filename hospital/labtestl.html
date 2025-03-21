@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Test Results</title>
+  <link rel="stylesheet" href="styleslb.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Hospital Logo">
+        <h2>Apollo Hospital</h2>
+      </div>
+      <h1>MLT Dashboard</h1>
+      <a href="mltdashboard.php">Dashboard</a>
+      <a href="profilemlt.php">My Profile</a>
+      <a href="lreq.html">Test Requests</a>
+      <a href="search.php">View Patient Details</a>
+      <a href="labtestl.html" class="active">Lab Test Result</a>
+      <a href="labso.php">Lab Supply Request</a>
+      <a href="stlogin.html">Log Out</a>
+    </div>
+    <div class="form-container">
+      <h2>Add Lab Test Results</h2>
+      <form id="labTestForm" method="post" action="submit.php">
+        <label for="testID">Test ID</label>
+        <input type="text" id="testID" name="testID" required>
+
+        <label for="patientID">Patient ID</label>
+        <input type="text" id="patientID" name="patientID" required>
+
+        <label for="patientName">Patient Name</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="testType">Test Type</label>
+        <select id="testType" name="testType" required>
+          <option value="Blood Test">Blood Test</option>
+          <option value="X-Ray">X-Ray</option>
+          <option value="MRI">MRI</option>
+        </select>
+
+        <label for="testDate">Test Date</label>
+        <input type="date" id="testDate" name="testDate" required>
+
+
+        <label for="resultDetails">Result Details</label>
+        <textarea id="resultDetails" name="resultDetails" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7; /* Slightly lighter background */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+}
+
+.report {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px; /* Softer corners for modern feel */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer, deeper shadow */
+    max-width: 800px;
+    margin: 0 auto; /* Center the report */
+}
+
+.letterhead {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* Increased margin for spacing */
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 15px; /* Increased padding for better spacing */
+}
+
+.letterhead .logo {
+    max-height: 90px; /* Reduced size to keep it proportional */
+    margin-right: 20px;
+}
+
+.letterhead .details h2 {
+    margin: 0;
+    color: #007BFF;
+    font-size: 22px; /* Slightly larger for prominence */
+    font-weight: 600; /* Bold for emphasis */
+}
+
+h1, h2 {
+    color: #08225B;
+}
+
+h1{
+    color: #007BFF;
+    
+}
+
+button.print-btn {
+    background: #08225B;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Slightly larger button for emphasis */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Clear separation from content */
+    font-size: 16px; /* Larger font size for readability */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button.print-btn:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px; /* More spacing from previous content */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px; /* Larger padding for readability */
+    text-align: left;
+}
+
+table th {
+    background-color: #08225B;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.metadata {
+    margin-top: 30px; /* More space from content */
+    font-size: 14px;
+    color: #777; /* Lighter color for less prominence */
+}
+
+@media print {
+    button.print-btn {
+        display: none; /* Hide print button when printing */
+    }
+
+    body {
+        padding: 0; /* Remove padding when printing */
+    }
+
+    .report {
+        max-width: 100%; /* Full width for printing */
+        box-shadow: none; /* Remove shadow when printing */
+    }
+
+    .letterhead {
+        border-bottom: 1px solid #007BFF; /* Thinner border for printing */
+    }
+
+    table th, table td {
+        font-size: 12px; /* Slightly smaller font for print */
+    }
+}
+
+.header-details {
+    display: flex;
+    justify-content: space-between;
+    width: 130%; /* Use full width for proper alignment */
+    margin-top: 20px; /* Increased margin for spacing */
+}
+
+.left, .right {
+    flex: 1;
+    font-size: 14px; /* Standardized font size */
+}

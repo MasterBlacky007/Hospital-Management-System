@@ -1,0 +1,115 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container that holds all the content */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header style */
+h3 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the back button */
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back:hover {
+    background-color: #3498db;
+}
+
+/* Main content area */
+.main-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form label styling */
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"],
+input[type="email"]
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+/* Button for form submission */
+.form-actions {
+    text-align: center;
+}
+
+.btn-update {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-update:hover {
+    background-color: #45a049;
+}
+
+/* Styling for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .form-actions {
+        padding-top: 20px;
+    }
+}

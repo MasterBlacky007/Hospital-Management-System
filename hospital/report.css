@@ -1,0 +1,126 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light Gray Background */
+}
+
+.main-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+}
+
+h2 {
+    color: #333333; /* Dark Gray for Header */
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+form label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #555555; /* Slightly lighter gray */
+}
+
+form select {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc; /* Light Gray Border */
+    border-radius: 5px;
+}
+
+form button {
+    padding: 5px 15px;
+    font-size: 14px;
+    background-color: #007bff; /* Blue Background */
+    color: #ffffff; /* White Text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons a, .action-buttons button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue Background */
+    color: #ffffff; /* White Text */
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.action-buttons a:hover, .action-buttons button:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Light Gray Border */
+}
+
+table th {
+    background-color: #007bff; /* Blue Background */
+    color: white; /* White Text */
+}
+
+table td {
+    background-color: #f9f9f9; /* Light Gray Background */
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #fff;
+    }
+    
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    header, form, .action-buttons {
+        display: none;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

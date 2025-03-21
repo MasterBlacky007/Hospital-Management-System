@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Details</title>
+  <link rel="stylesheet" href="addmissionf.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Hospital Logo">
+            <h2>Apollo Hospital</h2>
+        </div>
+        <h1>Inventory Manager</h1>
+        <nav>
+                <a href="inventorymanager.php">Dashboard</a>
+                <a href="profileinventory.php">My Profile</a>
+                <a href="stockdash.php">Stock</a>
+                <a href="orders.php">Orders</a>
+                <a href="isupplierdash.php">Suplier Profiles</a>
+                <a href="suporder.php">Supplier Orders</a>
+                <a href="stlogin.html">Logout</a>
+        </nav>
+    </div>
+
+
+    <div class="main-content">
+      <header>
+        <h2>Stock Details</h2>
+      </header>
+      <div class="form-section">
+
+        <form class ="admission-form" action="addstock.php" method="POST" >
+
+           <div class="form-section"> 
+                
+                <label for="item-name">Item Name</label>
+                <input type="text" id="item-name" name="item_name" placeholder="Enter Item Name" required>
+                
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" required>
+                
+                <label for="ex-date">Ex. Date</label>
+                <input type="date" id="ex-date" name="ex_date" required>
+                
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department" placeholder="Enter Department" required>
+            </div>    
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-add">Add Stock</button>
+                </div>
+        
+            
+        </form>
+    </div>
+  </div>
+
+</body>
+</html>

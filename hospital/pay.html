@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Payment for Appointment</h2>
+        <form id="paymentForm" action="process_payment.php" method="POST" enctype="multipart/form-data">
+            <label for="patient_name">Patient Name:</label>
+            <input type="text" name="patient_name" required>
+
+            <label for="contact">Contact No:</label>
+            <input type="text" name="contact" required>
+
+            <label for="amount">Amount:</label>
+            <input type="text" name="amount" required>
+
+            <label for="payment_method">Payment Method:</label>
+            <select name="payment_method" id="payment_method" required>
+                <option value="">Select Payment Method</option>
+                <option value="Credit/Debit Card">Credit/Debit Card</option>
+                <option value="Online Payment">Online Payment</option>
+            </select>
+
+            <!-- Credit/Debit Card Fields -->
+            <div id="cardDetails" style="display:none;">
+                <label for="card_number">Card Number:</label>
+                <input type="text" name="card_number">
+
+                <label for="expiry_date">Expiry Date (MM/YY):</label>
+                <input type="text" name="expiry_date">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" name="cvv">
+            </div>
+
+            <!-- Online Payment Upload -->
+            <div id="uploadSection" style="display:none;">
+                <label for="payment_pdf">Upload Payment PDF:</label>
+                <input type="file" name="payment_pdf" accept=".pdf">
+            </div>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+        <!-- Back Button -->
+        <button onclick="window.location.href='patientdash.html'" style="margin-top: 10px;">Back</button>
+    </div>
+
+    <script src="pay.js"></script>
+</body>
+</html>

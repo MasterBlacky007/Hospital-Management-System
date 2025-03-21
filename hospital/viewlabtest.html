@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Lab Test Results</title>
+  <link rel="stylesheet" href="styleslb.css">
+</head>
+<body>
+  <div class="container">
+    <h2>View Lab Test Results</h2>
+    <form method="post" action="viewlabtest.php">
+      <label for="searchType">Search By</label>
+      <select id="searchType" name="searchType" required>
+        <option value="mail">Email</option>
+        <option value="contact">Contact Number</option>
+        <option value="name">Patient Name</option>
+      </select>
+      <label for="searchValue">Enter Search Value</label>
+      <input type="text" id="searchValue" name="searchValue" required>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</body>
+</html>

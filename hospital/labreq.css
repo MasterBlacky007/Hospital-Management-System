@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width:80px;
+    height: 80px; /* Ensure the image is a square */
+    border-radius: 50%;
+    object-fit:cover; /* Ensures the image fills the circle without distortion */
+    object-position: center; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #067CD6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+
+/* Content Area Styles */
+.content {
+    margin-left: 300px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.content h1 {
+    font-size: 1.8em;
+    margin-bottom: 50px;
+}
+
+/* Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    appearance: none;
+    background-color: white;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.search {
+    background-color: #1e88e5;
+    color: white;
+}
+
+.btn.search:hover {
+    background-color: #1565c0;
+}
+
+.btn.submit {
+    background-color: #388e3c;
+    color: white;
+}
+
+.btn.submit:hover {
+    background-color: #2e7d32;
+}
+.sidebar ul {
+    list-style-type: none; /* Removes the bullets */
+    padding-left: 0; /* Removes any padding */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Optional: to control spacing between items */
+}

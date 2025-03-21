@@ -1,0 +1,114 @@
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.container h3 {
+    text-align: center;
+    color: #2a2a72; /* Primary color */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2a2a72; /* Primary color */
+}
+
+/* Form input fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Highlighting input focus */
+input:focus,
+textarea:focus {
+    border-color: #2a2a72; /* Primary color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(42, 42, 114, 0.4);
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* File input specific styling */
+input[type="file"] {
+    padding: 0;
+    border: none;
+    background-color: #fff;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2a2a72; /* Primary color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #4545b6; /* Slightly darker primary color */
+}
+
+/* Cancel button specific styling */
+button[type="button"] {
+    background-color: #d9534f; /* Danger color for cancel button */
+}
+
+button[type="button"]:hover {
+    background-color: #c9302c; /* Darker danger color */
+}
+
+/* Link styling for current file */
+.container p a {
+    color: #2a2a72; /* Primary color */
+    text-decoration: none;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button[type="button"] {
+        margin-top: 10px;
+    }
+}

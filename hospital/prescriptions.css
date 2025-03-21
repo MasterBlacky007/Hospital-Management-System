@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDF7F7;
+    color: #1A4650;
+}
+
+/* Sidebar Styles */
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px; /* Ensure the image is a square */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #067CD6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+
+/* Main Content Styles */
+.container {
+    margin-left: 270px; /* Space for sidebar */
+    padding: 30px;
+}
+
+
+
+/* Form Styles */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    flex-basis: 150px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #08225B;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    background-color: #08225B;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1E3A8A;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 10px;
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    label {
+        flex-basis: auto;
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .sidebar img {
+        width: 60px;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    .sidebar nav ul a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

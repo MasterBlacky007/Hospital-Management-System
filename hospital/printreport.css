@@ -1,0 +1,147 @@
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    max-width: 120px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #0056b3;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown Form */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+form label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+form select {
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+form button {
+    padding: 5px 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #00408a;
+}
+
+/* Table Section */
+table.transactions {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table.transactions th, table.transactions td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table.transactions th {
+    background-color: #0056b3;
+    color: white;
+    font-weight: bold;
+}
+
+table.transactions tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.transactions tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* No data message */
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.action-buttons button {
+    padding: 8px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.action-buttons button:hover {
+    background-color: #00408a;
+}
+
+/* Media Query for Print */
+@media print {
+    /* Hide dropdown, form buttons, and action buttons when printing */
+    form, .action-buttons, select, button {
+        display: none !important;
+    }
+
+    /* Optionally adjust table styles for printing */
+    table.transactions {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    table.transactions th, table.transactions td {
+        padding: 6px;
+    }
+
+    /* Ensure header is included */
+    .header {
+        display: block;
+    }
+
+    /* Adjust the page margins to ensure a clean print */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}

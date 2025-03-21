@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #002c6b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px; /* Ensure the image is a square */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    object-position: center; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+}
+
+.operations {
+    display: flex;
+    gap: 20px; /* Space between operation boxes */
+}
+
+.operation-box {
+    background-color: white; /* Background for operation boxes */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside operation boxes */
+    text-align: center; /* Center text and images */
+}
+
+.operation-box img {
+    width: 50px; /* Set a standard size for icons */
+}
+
+footer {
+    text-align: center; 
+    padding: 10px; 
+}

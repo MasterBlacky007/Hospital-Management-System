@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mount Apollo Hospital</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Mount Apollo Hospital Logo">
+        </div>
+        <h1>Mount Apollo Hospital</h1>
+        <p class="subtitle">Log In</p>
+        <form class="login-form" action="login.php" method="post">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="userRole" required>
+                <option value="" disabled selected>Select User Role</option>
+                <option value="cmanager">Center Manager</option>
+                <option value="imanager">Inventory Manager</option>
+                <option value="fmanager">Finance Manager</option>
+                <option value="doctor">Doctor</option>
+                <option value="nurse">Nurse</option>
+                <option value="pharmacist">Pharmacist</option>
+                <option value="MLT">MLT</option>
+                <option value="receptionist">Receptionist</option>
+                <option value="cashier">cashier</option>
+            </select>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    
+</body>
+</html>

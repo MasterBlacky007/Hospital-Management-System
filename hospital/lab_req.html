@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Requests</title>
+    <link rel="stylesheet" href="lbstyless.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="dashboard">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="logo.jpeg" alt="Hospital Logo">
+                    <h2>Apollo Hospital</h2>
+                    </div>
+                <h1>MLT Dashboard</h1>
+                <a href="mltdashboard.php">Dashboard</a>
+                <a href="profilemlt.php">My Profile</a>
+                <a href="lab_req.html">Test Requests</a>
+                <a href="search.php">View Patient Details</a>
+                <a href="labtestl.html">Lab Test Result</a>
+                <a href="labso.html">Lab Suppliy Request</a>
+                <a href="stlogin.html">Log Out</a>
+            </div>
+    <div class="main">
+        <div class="header">Test Request Info</div>
+        <div class="form-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+            <button onclick="loadRequests()">Search</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient Name</th>
+                    <th>Test Type</th>
+                    <th>Request Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="requestTable">
+                <!-- Dynamic content -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function loadRequests() {
+            const date = document.getElementById('date').value;
+            fetch('load_requests.php?date=' + date)
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('requestTable');
+                    tableBody.innerHTML = '';
+                    data.forEach(request => {
+                        tableBody.innerHTML += `
+                            <tr>
+                                <td>${request.id}</td>
+                                <td>${request.patient_name}</td>
+                                <td>${request.test_type}</td>
+                                <td>${request.request_date}</td>
+                                <td class="actions">
+                                    
+                                    <button class="delete" onclick="deleteRequest(${request.id})">Delete</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                });
+        }
+
+        function updateRequest(id) {
+            alert('Update functionality for ID: ' + id);
+        }
+
+        function deleteRequest(id) {
+            if (confirm('Are you sure you want to delete this request?')) {
+                fetch('delete_request.php?id=' + id)
+                    .then(response => response.text())
+                    .then(data => {
+                        alert(data);
+                        loadRequests(); // Refresh the table
+                    });
+            }
+        }
+    </script>
+</body>
+</html>

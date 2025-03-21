@@ -1,0 +1,133 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1A4650; /* Dark background */
+   
+    color: white;
+    position: fixed;
+    padding: 10px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width:80px;
+    height: 80px; /* Ensure the image is a square */
+    border-radius: 50%;
+    object-fit:cover; /* Ensures the image fills the circle without distortion */
+    object-position: center; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.sidebar-header h3,
+.sidebar-header h4 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+.sidebar h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #067CD6;
+    font-weight: bold;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px;
+    margin-top: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.sidebar-menu li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.header h1 {
+    color: #002f66;
+    margin-bottom: 20px;
+}
+
+/* Stat boxes styles */
+.stat-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
+    gap: 80px; /* Space between boxes */
+}
+
+.stat-box {
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-box h3 {
+    margin: 0 0 10px;
+    color: #002f66;
+}
+
+.stat-box p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #555;
+    
+}
+
+.stat-box a {
+    text-decoration: none;
+    color: white;
+    background-color: #002f66;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.stat-box a:hover {
+    background-color: #002f66;
+}
+h3{
+    color: cornflowerblue;
+}

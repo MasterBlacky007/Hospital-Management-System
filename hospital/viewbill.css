@@ -1,0 +1,40 @@
+/* Styles for the view bill page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bill-details {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bill-details h3,
+.bill-details h4 {
+    text-align: center;
+}
+
+.bill-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bill-details table th,
+.bill-details table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.print-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #45a049;
+}

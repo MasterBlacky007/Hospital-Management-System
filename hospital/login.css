@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDF7F7; /* Catskill White */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+/* Logo and Title */
+.logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #1A4650; /* Nile Blue */
+    margin: 0;
+}
+
+.subtitle {
+    color: #067CD6; /* Lochmara */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.login-form input,
+.login-form select,
+.login-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+    outline: none;
+    border: 1px solid #067CD6;
+}
+
+.login-form button {
+    background-color: #1A4650; /* Nile Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #067CD6; /* Lochmara */
+}

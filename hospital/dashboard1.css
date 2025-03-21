@@ -1,0 +1,343 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 287px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #067CD6;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 0px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #EDF7F7;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 40px 40px 40px 50px;
+    background: #f3f4f6;
+    min-height: 100vh;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+/* Operation Boxes */
+.operations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+}
+
+.operation-box {
+    width: 200px; 
+    height: 220px; 
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.operation-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.operation-box img {
+    width: 80px; 
+    height: 80px; 
+    margin-bottom: 10px;
+}
+
+.operation-box a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px; 
+    font-weight: bold; 
+    display: block;
+    margin-top: 10px; 
+    line-height: 1.4; 
+}
+
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    height: 500px; 
+}
+
+.slide {
+    display: none;
+    animation: fade 1.5s ease-in-out;
+    height: 100%; 
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation for fade effect */
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f2937;
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .slideshow-container {
+        height: 400px; 
+    }
+
+    .operation-box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+.form-container {
+    background-color: #F1FAFA;
+    padding: 30px 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    margin: 20px auto;
+    width: 50%; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .form-row {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    font-weight: bold;
+    color: #1A4650;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #1A4650;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #EDF7F7; 
+}
+
+.form-container textarea {
+    resize: none;
+}
+
+.form-container button.register-btn {
+    background-color: #28a745;
+    color: #EDF7F7;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.form-container button.register-btn:hover {
+    background-color: #218838;
+}
+
+/* Profile Form Styling */
+.profile-widget {
+    background-color: #FFFFFF;
+    padding: 39px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-widget h2 {
+    font-size: 1.5rem;
+    color: #1A4650;
+    margin-bottom: 15px;
+}
+
+.profile-widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-widget ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #333;
+}
+.form-btn {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-btn:hover {
+    background-color: #3498db;
+}
+
+.form-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}

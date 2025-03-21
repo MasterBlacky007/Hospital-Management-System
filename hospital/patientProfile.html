@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="dashboard1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Hospital Logo">
+                <h2>Apollo Hospital</h2>
+            </div>
+            <h1>Receptionist</h1>
+            <a href="receptionistdashboard.html">Dashboard</a>
+            <a href="profilerec.php">My Profile</a>
+            <a href="patientRegister.html">Patient Registration</a>
+            <a href="patientprofile.html">Patient Profile</a>
+            <a href="receppatdet.php">Patient Details</a>
+            <a href="appointmentdash.php">Appointment</a>
+            <a href="visitordash.php">Visitors</a></li>
+            <a href="stlogin.html">Logout</a>
+        </div>
+
+        <div class="main-content">
+            <h2>Patient Profile</h2>
+            <div class="form-container">
+                <form action="patientProfile.php" method="POST">
+                    <div class="form-row">
+                        <label for="nic">NIC</label>
+                        <input type="text" id="nic" name="nic" required>
+                        <button type="button" id="fetch_details_btn" class="form-btn">Fetch Details</button>
+                    </div>
+
+                    <!-- Auto-filled fields -->
+                    <div class="form-row">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" name="gender" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" readonly></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="contact">Contact No</label>
+                        <input type="text" id="contact" name="contact" readonly>
+                    </div>
+
+                    <!-- Editable fields -->
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="special_notes">Special Notes</label>
+                        <textarea id="special_notes" name="special_notes"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="register-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fetch_details_btn').addEventListener('click', function () {
+            const nic = document.getElementById('nic').value;
+
+            if (nic) {
+                fetch(`patientdetails.php?nic=${nic}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data) {
+                            document.getElementById('firstname').value = data.firstName || '';
+                            document.getElementById('lastname').value = data.lastName || '';
+                            document.getElementById('gender').value = data.gender || '';
+                            document.getElementById('age').value = data.age || '';
+                            document.getElementById('dob').value = data.dob || '';
+                            document.getElementById('address').value = data.address || '';
+                            document.getElementById('contact').value = data.contact || '';
+                        } else {
+                            alert('No patient found with this NIC.');
+                        }
+                    })
+                    .catch(error => console.error('Error fetching patient details:', error));
+            } else {
+                alert('Please enter a NIC.');
+            }
+        });
+    </script>
+</body>
+</html>

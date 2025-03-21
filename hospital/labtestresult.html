@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Test Results</title>
+  <link rel="stylesheet" href="styleslb.css">
+  <script>
+    function handleTestTypeChange() {
+      const uploadSection = document.getElementById("uploadSection");
+      const manualEntrySection = document.getElementById("manualEntrySection");
+      const testType = document.getElementById("testType").value;
+
+      if (testType === "Blood Test" || testType === "X-Ray" || testType === "MRI") {
+        uploadSection.style.display = "block";
+        manualEntrySection.style.display = "none";
+      } else {
+        uploadSection.style.display = "none";
+        manualEntrySection.style.display = "block";
+      }
+    }
+
+    function toggleManualEntry() {
+      document.getElementById("uploadSection").style.display = "none";
+      document.getElementById("manualEntrySection").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Hospital Logo">
+        <h2>Apollo Hospital</h2>
+      </div>
+      <h1>MLT</h1>
+      <a href="mltdashboard.php">Dashboard</a>
+      <a href="profilemlt.php">My Profile</a>
+      <a href="lreq.html">Test Requests</a>
+      <a href="search.php">View Patient Details</a>
+      <a href="labtestdash.php">Lab Test Result</a>
+      <a href="labsuprdash.php">Lab Supply Request</a>
+      <a href="stlogin.html">Log Out</a>
+    </div>
+    <div class="form-container">
+      <h2>Add Lab Test Results</h2>
+      <form id="labTestForm" method="post" action="labresult.php" enctype="multipart/form-data">
+        <label for="patientMail">Patient Mail</label>
+        <input type="text" id="patientMail" name="patientMail" required>
+
+
+        <label for="patientName">Patient Name</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="contact">Contact No</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="testType">Test Type</label>
+        <select id="testType" name="testType" onchange="handleTestTypeChange()" required>
+          <option value="" disabled selected>Select Test Type</option>
+          <option value="Blood Test">Blood Test</option>
+          <option value="X-Ray">X-Ray</option>
+          <option value="MRI">MRI</option>
+          <option value="Manual Entry">Manual Entry</option>
+        </select>
+
+        <!-- Upload Section -->
+        <div id="uploadSection" style="display: none;">
+          <label for="testFile">Upload Word File</label>
+          <input type="file" id="testFile" name="testFile" accept=".doc,.docx">
+          <button type="button" onclick="toggleManualEntry()">Enter Manually Instead</button>
+        </div>
+
+        <!-- Manual Entry Section -->
+        <div id="manualEntrySection" style="display: none;">
+          <label for="testDate">Test Date</label>
+          <input type="date" id="testDate" name="testDate">
+
+          <label for="resultDetails">Result Details</label>
+          <textarea id="resultDetails" name="resultDetails" rows="5"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

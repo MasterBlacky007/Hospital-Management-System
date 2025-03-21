@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDF7F7;
+    color: #1A4650;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #067CD6;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+/* Main Content */
+.container {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #EDF7F7;
+    width: calc(100% - 250px);
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #1A4650;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #1A4650;
+    font-weight: bold;
+}
+
+.form-container input, 
+.form-container select, 
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-container button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button[type="submit"] {
+    background-color: #067CD6;
+}
+
+.form-container button[type="reset"] {
+    background-color: #FF6B6B;
+}
+
+.form-container button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .container {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}

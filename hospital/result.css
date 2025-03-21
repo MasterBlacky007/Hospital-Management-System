@@ -1,0 +1,170 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results-table th, .results-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+    background-color: #f2f2f2;
+}
+
+/* Buttons */
+.view-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+.result-details p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #218838;
+}
+
+/* Search and Clear Button Styling */
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    width: 60%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Print-specific Styles */
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+    }
+    .container {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        box-shadow: none;
+    }
+    .back-btn, .print-btn {
+        display: none;  /* Hide both back and print buttons during printing */
+    }
+    .result-details {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Styling for the Table, Search Bar, and Buttons */
+.container .search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.container .search-container input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    width: 60%;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.container .search-container button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.container .search-container button:hover {
+    background-color: #0056b3;
+}
+
+.container .search-container .clear-btn {
+    background-color: #dc3545;
+}
+
+.container .search-container .clear-btn:hover {
+    background-color: #c82333;
+}

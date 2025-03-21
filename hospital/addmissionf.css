@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar (Unchanged) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    color: #7BBCD6;
+    margin: 10px 0;
+}
+
+.sidebar h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #067CD6;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #EDF7F7;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px 40px 40px 350px;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.main-content h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.admission-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.admission-form .form-section {
+    margin-bottom: 20px;
+}
+
+.admission-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.admission-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.admission-form input:focus {
+    border-color: #003366;
+    outline: none;
+}
+
+/* Form Action Buttons */
+.form-actions {
+    text-align: center;
+}
+
+.form-actions .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-update {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-update:hover {
+    background-color: #e0a800;
+}
+
+.btn-discharge {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-discharge:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2rem;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .admission-form input {
+        padding: 8px;
+    }
+
+    .form-actions .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+.admission-form textarea {
+    resize: vertical; /* Allow vertical resizing for better usability */
+}
+
+/* Form Action Buttons */
+.form-actions .btn {
+    padding: 12px 20px; /* Increased padding for buttons */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    display: inline-block;
+}
+.admission-form textarea {
+    padding: 10px;
+    width: 90%;
+}

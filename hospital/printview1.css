@@ -1,0 +1,169 @@
+/* Reset and General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    max-width: 120px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #0056b3;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Prescription Details */
+h3 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prescription-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.prescription-details strong {
+    color: #000;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    vertical-align: top;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.print-button {
+    background-color: #28a745;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.print-button:hover {
+    background-color: #218838;
+}
+
+.back-button {
+    background-color: #007bff;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .header-content h1, .header-content p {
+        color: #000000;
+    }
+
+    .action-buttons, button {
+        display: none !important;
+    }
+
+    table th {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    table td, table th {
+        border-color: #000000;
+    }
+}

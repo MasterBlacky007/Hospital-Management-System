@@ -1,0 +1,51 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLT</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Hospital Logo">
+                <h2>Apollo Hospital</h2>
+            </div>
+            <h1>MLT</h1>
+        
+            <a href="mltdashboard.php">Dashboard</a>
+            <a href="profilemlt.php">My Profile</a>
+            <a href="lreq.html">Test Requests</a>
+            <a href="search.php">View Patient Details</a>
+            <a href="labtestdash.php">Lab Test Result</a>
+            <a href="labsuprdash.php">Lab Supply Request</a>
+            <a href="stlogin.html">Log Out</a>
+        </div>
+
+        <main class="main-content">
+            <header>
+               
+            </header>
+            <section>
+            <br><br>
+                <div class="operations">
+                    <div class="operation-box">
+                        <img src="images/drugorder.png" alt="Add Icon">
+                        <a href="labso.php">Add Lab Supplies Requests</a>
+                    </div>
+                    <div class="operation-box">
+                        <img src="images/view.webp" alt="View Icon">
+                        <a href="labsuprview.php">View Lab Supplies Requests Status</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Dashboard</title>
+    <link rel="stylesheet" href="maindashboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Hospital Logo">
+                <h2>Apollo Hospital</h2>
+            </div>
+            <h1>Nurse</h1>
+            <nav>
+                <a href="nursedashboard.html">Dashboard</a>
+                <a href="nursepatient.php">Patient Profile</a>
+                <a href="roomdash.php">Room</a>
+                <a href="admissiondash.php">Admission</a>
+                <a href="my_task.php">My Task</a>
+                <a href="nurse_lab.php">View Lab Test Results</a>
+                <a href="nurse_pres.php">View Prescription</a>
+                <a href="vitalsigndash.php">Vital Sign</a>
+                <a href="progressdash.php">Progress Notes</a>
+                <a href="stlogin.html">Logout</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="content">
+            
+            <section class="dashboard">
+                <div class="card">
+                    <h3>Patients</h3>
+                    <p>View and manage patient information.</p>
+                    <a href="nursepatient.php">View Patients</a>
+                </div>
+                <div class="card">
+                    <h3>Tasks</h3>
+                    <p>Check and update assigned tasks.</p>
+                    <a href="mytask.php">View Tasks</a>
+                </div>
+                <div class="card">
+                    <h3>Admissions</h3>
+                    <p>Manage admissions.</p>
+                    <a href="admissiondash.php">Manage Admissions</a>
+                </div>
+                <div class="card">
+                    <h3>Rooms</h3>
+                    <p>Check and manage rooms.</p>
+                    <a href="roomdash.php">Rooms</a>
+                </div>
+                <div class="card">
+                    <h3>Lab Test Results</h3>
+                    <p>Check lab test results.</p>
+                    <a href="viewlabtest.php">View Lab Test Results</a>
+                </div>
+                <div class="card">
+                    <h3>Prescriptions</h3>
+                    <p>Check prescriptions.</p>
+                    <a href="view_prescriptions.php">View Prescriptions</a>
+                </div>
+                <div class="card">
+                    <h3>Vital Sign</h3>
+                    <p>Check Vital Signs.</p>
+                    <a href="vitalsigndash.php">Vital Signs</a>
+                </div>
+                <div class="card">
+                    <h3>Progress Notes</h3>
+                    <p>Check progress notes.</p>
+                    <a href="progressdash.php">Progress Notes</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Hospital Management System</p>
+    </footer>
+</body>
+</html>

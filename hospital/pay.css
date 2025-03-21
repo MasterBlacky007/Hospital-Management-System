@@ -1,0 +1,112 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="month"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="month"]:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Payment Type Dropdown */
+select {
+    font-size: 14px;
+}
+
+/* Payment Card Fields */
+div[id$="Fields"] {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Back Button */
+.back-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}

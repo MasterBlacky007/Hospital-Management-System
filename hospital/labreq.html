@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Request Form</title>
+    <link rel="stylesheet" href="labreq.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Hospital Logo">
+            <h2>Apollo Hospital</h2>
+        </div>
+        <nav>
+            <ul>
+                <a href="doctordash.html">Dashboard</a>
+                    <a href="docprofile.php">My Profile</a>
+                    <a href="docviewptprofile.php">Patient Profile</a>
+                    <a href="presdash.php">Prescription</a>
+                    <a href="labdash.php">Lab Test</a>
+                    <a href="docappointment.php">Appointment</a>
+                    <a href="taskdash.php">Task</a>
+                    <a href="viewdprogress.php">View Progress Notes</a>
+                    <a href="stlogin.html">Log Out</a>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <h1>Lab Request Form</h1>
+        <form id="labForm" action="submit_request.php" method="POST">
+            <div class="form-group">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" name="patientName" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact No:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="testType">Test Type:</label>
+                <select id="testType" name="testType" required>
+                    <option value="" disabled selected>Select a test type</option>
+                    <option value="Blood Test">Blood Test</option>
+                    <option value="X-Ray">X-Ray</option>
+                    <option value="CT Scan">CT Scan</option>
+                    <option value="MRI">MRI</option>
+                    <!-- Add more test options as needed -->
+                </select>
+            </div>
+            <!-- Hidden status field (will be 'Pending' by default) -->
+            <input type="hidden" name="status" value="Pending">
+            
+            <div class="form-actions">
+                
+                <button type="submit" class="btn submit">Submit Request</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

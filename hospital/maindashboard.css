@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Container for Sidebar and Content */
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #067CD6;
+    font-weight: bold;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+/* Main Content */
+.content {
+    margin-left: 285px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem auto;
+}
+
+.card {
+    background-color: #EDF7F7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #1A4650;
+}
+
+.card p {
+    margin: 0 0 1rem 0;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+}

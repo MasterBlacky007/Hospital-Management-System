@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDF7F7;
+    color: #1A4650;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px; /* Ensure the image is a square */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px 20px 20px 50px;
+    background-color: #EDF7F7;
+    min-height: 100vh;
+}
+
+.main-content header h2 {
+    color: #1A4650;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #EDF7F7;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #1A4650;
+}
+
+th {
+    background-color: #067CD6;
+    color: #EDF7F7;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:nth-child(even) {
+    background-color: #F1FAFA;
+}
+
+tr:hover {
+    background-color: #DFF0F0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 150px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+}

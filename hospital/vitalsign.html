@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Signs</title>
+    <link rel="stylesheet" href="addmissionf.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Hospital Logo">
+                <h2>Apollo Hospital</h2>
+            </div>
+            <h1>Nurse</h1>
+            <nav>
+                <a href="nursedashboard.html">Dashboard</a>
+                <a href="nursepatient.php">Patient Profile</a>
+                <a href="roomdash.php">Room</a>
+                <a href="admissiondash.php">Admission</a>
+                <a href="mytask.php">My Task</a>
+                <a href="viewlabtest.php">View Lab Test Results</a>
+                <a href="pres_view.php">View Prescription</a>
+                <a href="vitalsigndash.php">Vital Sign</a>
+                <a href="progressdash.php">Progress Notes</a>
+                <a href="stlogin.html">Logout</a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h2>Vital Signs</h2>
+            </header>
+
+            <form class="admission-form" action="vitalsign.php" method="POST">
+                <div class="form-section">
+                    <h3>Patient Information</h3>
+
+                    <label for="patient_name">Patient Name</label>
+                    <input type="text" id="patient_name" name="patient_name" required>
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required>
+
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contactNo" name="contactNo" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Vital Signs Data</h3>
+                    <label for="bp">Blood Pressure (BP)</label>
+                    <input type="text" id="bp" name="bp" required>
+
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" name="height" step="0.01" required>
+
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" name="weight" step="0.01" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Staff Information</h3>
+                    <label for="staff_id">Staff ID</label>
+                    <input type="text" id="staff_id" name="staff_id" required>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-add" name="action" value="add">Add</button>
+                </div>
+                    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

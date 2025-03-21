@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDF7F7;
+    color: #1A4650;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A4650;
+    color: #EDF7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: 80px; /* Ensure the image is a square */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #7BBCD6;
+}
+
+.sidebar h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #067CD6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #EDF7F7;
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #067CD6;
+    color: #EDF7F7;
+}
+
+/* Main Content */
+.main-dashboard {
+    margin-left: 250px;
+    padding: 20px 20px 20px 45px;
+    background-color: #EDF7F7;
+    min-height: 100vh;
+}
+
+.main-dashboard h1 {
+    color: #1A4650;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Profile Form Styling */
+.profile-widget {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-widget h2 {
+    font-size: 1.5rem;
+    color: #1A4650;
+    margin-bottom: 15px;
+}
+
+.profile-widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-widget ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.profile-widget ul li strong {
+    font-weight: bold;
+    color: #067CD6;
+}
+
+/* Form Input Styling */
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1A4650;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: #067CD6;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    background-color: #067CD6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #045A8D;
+}
+
+/* Styling for Sidebar Links */
+.sidebar ul {
+    list-style-type: none; /* Removes the bullets */
+    padding-left: 0; /* Removes any padding */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Optional: to control spacing between items */
+}
+
+/* Canvas Styling */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-widgets {
+        flex-direction: column;
+    }
+
+    .widget {
+        flex: 1 1 100%;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-dashboard {
+        margin-left: 200px;
+    }
+
+    /* Profile Widget */
+    .profile-widget {
+        width: 90%;
+    }
+    
+}

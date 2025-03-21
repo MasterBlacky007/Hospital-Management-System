@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Signs</title>
+    <link rel="stylesheet" href="addmissionf.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Hospital Logo">
+                <h2>Apollo Hospital</h2>
+            </div>
+            <h1>Nurse</h1>
+            <nav>
+                <a href="nursedashboard.html">Dashboard</a>
+                <a href="nursepatient.php">Patient Profile</a>
+                <a href="roomdash.php">Room</a>
+                <a href="admissiondash.php">Admission</a>
+                <a href="mytask.php">My Task</a>
+                <a href="viewlabtest.php">View Lab Test Results</a>
+                <a href="pres_view.php">View Prescription</a>
+                <a href="vitalsigndash.php">Vital Sign</a>
+                <a href="progressdash.php">Progress Notes</a>
+                <a href="stlogin.html">Logout</a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h2>Progress Notes</h2>
+            </header>
+
+            <form class="admission-form" action="progressnote.php" method="POST">
+                
+
+                    <div class="form-section">
+                        <h3>Patient Information</h3>
+                    
+                        <label for="patient_name">Patient Name</label>
+                        <input type="text" id="patient_name" name="patient_name" required>
+                    
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="contact">Contact Number</label>
+                        <input type="text" id="contactNo" name="contactNo" required>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Progress Notes</h3>
+                    
+                        <label for="chief_complaint">Chief Complaint</label>
+                        <textarea id="chief_complaint" name="chief_complaint" rows="4" required></textarea>
+                    
+                        <label for="assessment">Assessment</label>
+                        <textarea id="assessment" name="assessment" rows="4" required></textarea>
+                    
+                        <label for="plan">Plan</label>
+                        <textarea id="plan" name="plan" rows="4" required></textarea>
+                    
+                        <label for="diagnosis">Diagnosis</label>
+                        <input type="text" id="diagnosis" name="diagnosis" required>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Staff Information</h3>
+                    
+                        <label for="staff_id">Staff ID</label>
+                        <input type="text" id="staff_id" name="staff_id" required>
+                    
+                        <label for="staff_name">Staff Name</label>
+                        <input type="text" id="staff_name" name="staff_name" required>
+                    
+                        <label for="date_of_entry">Date of Entry</label>
+                        <input type="date" id="date_of_entry" name="date_of_entry" required>
+                    
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-add" name="action" value="add">Add Progress Note</button>
+                    </div>
+                    
+                    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1e3d59, #1f78b4, #28a745);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    animation: fadeIn 2s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e3d59;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.hospital-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Slide-in Animation for Logo */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Styling */
+.top-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 10px 15px;
+    background-color: #0d5c91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Animation for Buttons */
+.nav-btn:hover {
+    background-color: #28a745;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section */
+.welcome-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInContent 1.5s ease-in-out;
+}
+
+/* Cards Section */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    animation: fadeInCard 2s ease;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e3d59;
+    padding: 10px 0;
+    color: white;
+    font-size: 14px;
+}
+
+/* Animations for Cards */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in for Welcome Section */
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Welcome Section */
+.welcome-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInContent 1.5s ease-in-out;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.welcome-container h2 {
+    font-size: 36px; /* Larger and more prominent */
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: #f8f9fa; /* Light shade for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+}
+
+.welcome-container p {
+    font-size: 18px;
+    line-height: 1.8; /* Improved readability */
+    color: #dce3e9; /* Subtle light blue for a soft look */
+    font-style: italic; /* Adds a friendly tone */
+    margin-top: 10px;
+}
+
+/* Cards Section */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    animation: fadeInCard 2s ease;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 22px; /* Slightly larger */
+    font-weight: bold;
+    text-transform: uppercase; /* Makes it more formal */
+    letter-spacing: 1px;
+    color: #ffffff; /* White for strong visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a subtle depth */
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Elegant serif font for contrast */
+    color: #e6f2f2; /* Light teal shade for softer readability */
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="dashboard1.css">
+    <style>
+        #gender {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #1A4650;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #EDF7F7; 
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Hospital Logo">
+                <h2>Apollo Hospital</h2>
+            </div>
+            <h1>Receptionist</h1>
+            <a href="receptionistdashboard.html">Dashboard</a>
+            <a href="profilerec.php">My Profile</a>
+            <a href="patientRegister.html">Patient Registration</a>
+            <a href="patientprofile.html">Patient Profile</a>
+            <a href="receppatdet.php">Patient Details</a>
+            <a href="appointmentdash.php">Appointment</a>
+            <a href="visitordash.php">Visitors</a></li>
+            <a href="stlogin.html">Logout</a>
+        </div>
+        <div class="main-content">
+            <h2>Patient Registration</h2>
+            <div class="form-container">
+                <form method="POST" action="patientRegister.php">
+                    <div class="form-row">
+                        <label for="firstName">first Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="nic">NIC</label>
+                        <input type="text" id="nic" name="nic" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="contactNo">Contact No</label>
+                        <input type="text" id="contactNo" name="contactNo" required>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="register-btn">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

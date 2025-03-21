@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Interface</title>
+  <link rel="stylesheet" href="addmissionf.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Hospital Logo">
+            <h2>Apollo Hospital</h2>
+        </div>
+        <h1>Nurse</h1>
+        <nav>
+            <a href="nursedashboard.html">Dashboard</a>
+                <a href="nursepatient.php">Patient Profile</a>
+                <a href="roomdash.php">Room</a>
+                <a href="admissiondash.php">Admission</a>
+                <a href="mytask.php">My Task</a>
+                <a href="viewlabtest.php">View Lab Test Results</a>
+                <a href="pres_view.php">View Prescription</a>
+                <a href="vitalsigndash.php">Vital Sign</a>
+                <a href="progressdash.php">Progress Notes</a>
+                <a href="stlogin.html">Logout</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+      <header>
+        <h2>Admission Details</h2>
+      </header>
+      <form class="admission-form" action="admission.php" method="POST">
+        
+        
+        <div class="form-section">
+          
+          <label for="admission-reason">Admission Reason</label>
+          <input type="text" name="admission_reason" id="admission-reason" placeholder="Enter Reason" required>
+          
+          <label for="room-number">Room Number</label>
+          <input type="text" name="room_number" id="room-number" placeholder="Enter Room Number" required>
+          
+          <label for="admit-date">Admit Date</label>
+          <input type="date" name="admit_date" id="admit-date" required>
+          
+          <label for="discharge-date">Discharge Date</label>
+          <input type="date" name="discharge_date" id="discharge-date" required>
+        </div>
+        
+        <h2>Patient Details</h2>
+        <div class="form-section">
+          
+          <label for="patient-name">Patient Name</label>
+          <input type="text" name="patient_name" id="patient-name" placeholder="Enter Patient Name" required>
+          
+          <label for="contact-number">Contact Number</label>
+          <input type="text" name="contact_number" id="contact-number" placeholder="Enter Contact Number" required>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-add">Add Admission</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  
+</body>
+</html>
